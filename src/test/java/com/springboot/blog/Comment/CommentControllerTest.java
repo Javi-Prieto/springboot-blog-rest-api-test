@@ -1,4 +1,4 @@
-package com.springboot.blog.CommentTest;
+package com.springboot.blog.Comment;
 
 import com.springboot.blog.entity.Comment;
 import com.springboot.blog.entity.Post;
