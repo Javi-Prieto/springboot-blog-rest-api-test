@@ -182,7 +182,7 @@ public class CoomentIntegration {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setBearerAuth(adminToken);
-        commentDto.setName(""); // Nombre vacío, lo que es inválido
+        commentDto.setName(""); 
         HttpEntity<Object> requestBodyHeaders = new HttpEntity<>(commentDto, headers);
         ResponseEntity<CommentDto> response = testRestTemplate.exchange("/api/v1/posts/"+1000L+"/comments/"+1L, HttpMethod.PUT, requestBodyHeaders, CommentDto.class);
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
