@@ -1,0 +1,15 @@
+delete from users_roles;
+delete from users;
+delete from posts;
+delete from categories;
+delete from comments;
+delete from roles;
+INSERT INTO roles (id, name) VALUES (1, 'ROLE_ADMIN');
+INSERT INTO roles (id, name) VALUES (2, 'ROLE_USER');
+INSERT INTO users (id, name, username, email, password) VALUES (2, 'Pedro', 'ToRechulon', 'pedro@gmail.com', '1234');
+insert into users (id,name,username,email,password) values (1, 'Juan', 'lacabra_7', 'juanillolacabra@gmail.com','lacabra');
+insert into categories (id, name, description) values (1000, 'hola', 'holas a mundo');
+insert into posts (id, title, description, content, category_id) values (1000, 'hola', 'hola mundo java', 'System.out.println("Hola Mundo")', 1000);
+insert into posts (id, title, description, content, category_id) values (1001, 'Hola Mundo Python', 'hola mundo python', 'print("Hola Mundo")', 1000);
+INSERT INTO users_roles (user_id, role_id) VALUES (1, 1);
+INSERT INTO users_roles (user_id, role_id) VALUES (2, 2);

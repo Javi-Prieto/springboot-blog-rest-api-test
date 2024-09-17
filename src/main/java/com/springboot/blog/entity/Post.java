@@ -18,9 +18,8 @@ import java.util.Set;
 public class Post {
 
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "posts_gen")
+    @SequenceGenerator(name = "posts_gen", sequenceName = "posts_id_seq", allocationSize = 1)
     private Long id;
 
     @Column(name = "title", nullable = false)
